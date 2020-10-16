@@ -1,5 +1,6 @@
 /* General Styles */
 /* Apply to all sizes */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,6 +15,14 @@ a {
   color: black;
 }
 
+h3 {
+  background: #ddd;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/*Header styles*/
 
 header {
   position: sticky;
@@ -26,6 +35,21 @@ header {
   z-index: 1;
 }
 
+.nav-1 {
+  display: flex;
+  align-items: center;
+}
+
+.nav-1 > a {
+  margin: .3em;
+  font-size: 1.1em;
+}
+
+/*Form styles*/
+
+header + h2 {
+  text-align: center;
+}
 
 input {
   display: block;
@@ -44,23 +68,10 @@ input[type="submit"] {
   padding: .3em 1em;
   font-weight: bold;
   font-size: 1.1em;
+  cursor: pointer;
 }
 
-
-.nav-1 {
-  display: flex;
-  align-items: center;
-}
-
-.nav-1 > a {
-  margin: .3em;
-  font-size: 1.1em;
-}
-
-header + h2 {
-  text-align: center;
-}
-
+/*Styles for where they hype product/service*/
 
 .hype {
   display: flex;
@@ -76,7 +87,7 @@ header + h2 {
   margin-left: 5vw;
 }
 
-
+/*Video styling*/
 
 iframe {
   display: block;
@@ -87,6 +98,8 @@ iframe {
   margin-right: auto;
   margin-bottom: 30px;
 }
+
+/*Main trombone sales area*/
 
 main {
   display: flex;
@@ -100,13 +113,6 @@ main {
   width: 270px;
   height: 270px;
   margin-top: 20px;
-}
-
-h3 {
-  background: #ddd;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  text-transform: uppercase;
 }
 
 .trombone-sale > p:first-of-type {
@@ -132,12 +138,15 @@ h3 {
   top: 30px;
 }
 
+/*Footer with navigation, copyright, and citation for imgs*/
+
 footer {
   padding: 20px 5px 10px 0;
   margin-top: 30px;
   background: #ddd;
   text-align: right;
 }
+
 .nav-2 > a {
   display: inline;
   padding-bottom: 20px;
@@ -149,34 +158,34 @@ nav + p {
   color: #676767;
 }
 
+/*Small, Medium and Large breakpoints*/
 
-
-
-/* Add Breakpoints Here */
+/*Small*/
 @media (max-width: 550px) {
 
-.hype > img {
-  display: none;
+  .hype > img {
+    display: none;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  nav:first-of-type {
+    flex-direction: column;
+  }
+
+  .hype > div {
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  main {
+    flex-direction: column;
+  }
 }
 
-header {
-  flex-direction: column;
-}
-
-nav:first-of-type {
-  flex-direction: column;
-}
-
-.hype > div {
-  margin: 10px auto;
-  text-align: center;
-}
-
-main {
-  flex-direction: column;
-}
-}
-
+/*Medium*/
 @media (max-width: 800px)and  (min-width: 551px) {
 
   main {
@@ -185,11 +194,9 @@ main {
   header {
     justify-content: space-between;
   }
-
-
-
 }
 
+/*Large*/
 @media (min-width: 801px) {
   header {
     justify-content: space-between;
@@ -199,10 +206,8 @@ main {
     margin-left: auto;
     margin-right: auto;
   }
+
   .trombone-sale {
     margin-right: 15px;
   }
 }
-
-
-/* Apply to certain size and above */
