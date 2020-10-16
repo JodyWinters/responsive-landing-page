@@ -1,10 +1,57 @@
 /* General Styles */
 /* Apply to all sizes */
-*, *:before, *:after {
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+
+}
+
+.nav-1 {
+  display: flex;
+  align-items: center;
+}
+
+.nav-1 > a {
+  margin: .3em;
+  font-size: 1.1em;
 }
 
 
 /* Add Breakpoints Here */
-/* Apply to certain size and above */
+@media (max-width: 500px) {
 
+h2~img {
+  display: none;
+}
+
+header {
+  flex-direction: column;
+}
+
+nav:first-of-type {
+  flex-direction: column;
+}
+
+}
+
+
+/* Apply to certain size and above */
