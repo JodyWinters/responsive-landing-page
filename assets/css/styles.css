@@ -23,6 +23,7 @@ header {
   align-items: center;
   width: 100%;
   padding: 10px;
+  z-index: 1;
 
 }
 
@@ -79,7 +80,70 @@ iframe {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
+
+main {
+  display: flex;
+  align-items: center;
+}
+
+.trombone-sale {
+  border: 1px solid black;
+  text-align: center;
+  width: 270px;
+  height: 270px;
+  margin-top: 20px;
+}
+
+h3 {
+  background: #ddd;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.trombone-sale > p:first-of-type {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.trombone-sale > p {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.trombone-sale > a {
+  background: #f1c40f;
+  border: none;
+  border-radius: 2px;
+  padding: .3em 1em;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  position: relative;
+  top: 30px;
+}
+
+footer {
+  padding: 20px 5px 10px 0;
+  margin-top: 30px;
+  background: #ddd;
+  text-align: right;
+}
+.nav-2 > a {
+  display: inline;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  font-size: 1.2em;
+}
+
+nav + p {
+  color: #676767;
+}
+
+
 
 
 /* Add Breakpoints Here */
@@ -94,6 +158,10 @@ header {
 }
 
 nav:first-of-type {
+  flex-direction: column;
+}
+
+main {
   flex-direction: column;
 }
 
